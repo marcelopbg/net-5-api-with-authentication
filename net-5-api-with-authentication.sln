@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-5-api-with-authentication", "net5-api-with-authentication\net-5-api-with-authentication.csproj", "{5198DE50-27E5-42ED-BCD5-4F1088C750AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-5-api-authentication-routes-testing", "net-5-api-authentication-routes-testing\net-5-api-authentication-routes-testing.csproj", "{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB} = {5198DE50-27E5-42ED-BCD5-4F1088C750AB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C36B5B43-1E4E-4FC0-801B-A58247CE1C37}
+	EndGlobalSection
+EndGlobal

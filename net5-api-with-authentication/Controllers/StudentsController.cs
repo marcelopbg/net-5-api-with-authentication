@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using net_5_api_with_authentication.Models;
+using net_5_api_with_authentication.Repositories;
+using net_5_api_with_authentication.Specification;
 
 namespace net_5_api_with_authentication.Controllers
 {
@@ -18,22 +20,20 @@ namespace net_5_api_with_authentication.Controllers
 
         private readonly SchoolContext _context;
         private readonly ILogger<StudentsController> _logger;
+        private readonly IStudentRepository studentRepository;
 
-        public StudentsController(ILogger<StudentsController> logger, SchoolContext context)
+        public StudentsController(ILogger<StudentsController> logger, SchoolContext context, IStudentRepository repository)
         {
             _logger = logger;
             _context = context;
+            studentRepository = repository;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> Get()
         {
-            var studentList = await _context.
-            Students
-            .Include(student => student.Enrollments)
-            .ThenInclude(enrollment => enrollment.Course)
-            .ToListAsync();
-            return studentList;
+            var studentList = await studentRepository.ListAsync(new StudentWithEnrollmentsSpecification());
+            return studentList.ToList();
         }
 
         [HttpGet("{id}")]

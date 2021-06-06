@@ -5,10 +5,14 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-5-api-with-authentication", "net5-api-with-authentication\net-5-api-with-authentication.csproj", "{5198DE50-27E5-42ED-BCD5-4F1088C750AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-5-api-authentication-routes-testing", "net-5-api-authentication-routes-testing\net-5-api-authentication-routes-testing.csproj", "{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net-5-api-authentication-routes-testing", "net-5-api-authentication-routes-testing\net-5-api-authentication-routes-testing.csproj", "{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5198DE50-27E5-42ED-BCD5-4F1088C750AB} = {5198DE50-27E5-42ED-BCD5-4F1088C750AB}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{33F49B06-C5A8-4889-8CBC-580A7EC40D1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45BEA521-1ECF-4BB4-ADF8-E78115F1598B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5198DE50-27E5-42ED-BCD5-4F1088C750AB} = {33F49B06-C5A8-4889-8CBC-580A7EC40D1A}
+		{72F63CB6-11D8-4616-BC3A-986AE6D5CD7C} = {45BEA521-1ECF-4BB4-ADF8-E78115F1598B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C36B5B43-1E4E-4FC0-801B-A58247CE1C37}
